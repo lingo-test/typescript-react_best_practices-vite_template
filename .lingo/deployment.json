@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "runtime": "npm",
+  "port": 8080,
+  "applicationStart": "cd code_deploy_application && npm install && npm run build && { nohup npm run preview -- --host 0.0.0.0 --port 8080 --strictPort >> /root/application.log 2>&1 & APP_PID=$!; echo \"$APP_PID\" > /root/application.pid; sleep 2; kill -0 \"$APP_PID\"; }",
+  "applicationStop": "if [ -f /root/application.pid ]; then kill \"$(cat /root/application.pid)\" 2>/dev/null || true; rm -f /root/application.pid; fi"
+}
