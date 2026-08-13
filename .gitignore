@@ -10,3 +10,12 @@ node_modules/
 
 # Build output
 dist
+.bash_history
+.chat.json
+.lingo_rollback_history.json
+.meta.json
+.venv/
+dist/
+build/
+core
+!core/
