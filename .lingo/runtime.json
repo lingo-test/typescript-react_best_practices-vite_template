@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "projectType": "vite",
+  "services": [
+    {
+      "name": "web",
+      "role": "frontend",
+      "cwd": ".",
+      "port": 5173,
+      "startCommand": "npx vite --port 5173 --host 0.0.0.0 --strictPort",
+      "preview": true
+    }
+  ],
+  "checkCommand": "npm run lint"
+}
